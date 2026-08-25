@@ -28,7 +28,7 @@ code, user (and whether it ran as root), and the working directory it ran in.
 Overrides the `history` builtin to print that log newest-first:
 
 ```
-2026-08-25 21:04:32 EAT  [exit 0  ]  rachel        ~/projects/api                 npm test
+2026-08-25 21:04:32 EAT  [exit 0  ]  wangechi        ~/projects/api                 npm test
 ```
 
 Fields are stored separated by `\x1f` (unit separator), so commands containing
