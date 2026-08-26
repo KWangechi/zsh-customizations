@@ -18,7 +18,7 @@ _ts_precmd() {
 
 
     # Print timestamp
-    print -P "%F{8}◆ [$finished] — ${__ts_cmd} — took ${dur_fmt}s — exit ${exit_code}%f"
+    print -P "%F{8}◆ Completed at: [$finished] — ${__ts_cmd} — took ${dur_fmt}s — exit ${exit_code}%f"
   fi
   unset __ts_start __ts_cmd
 }

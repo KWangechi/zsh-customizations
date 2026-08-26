@@ -18,7 +18,7 @@ themes/               (empty for now)
 After each command returns, prints a dim one-line summary: when it finished, what it was, how long it took, and its exit code.
 
 ```
-◆ [21:04:37 EAT] — npm test — took 4.812s — exit 0
+◆ Completed at: [2026-08-25 21:04:37 EAT] — npm test — took 4.812s — exit 0
 ```
 
 ### `cmd-history-log`
