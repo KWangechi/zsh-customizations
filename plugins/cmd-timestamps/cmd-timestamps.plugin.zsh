@@ -11,7 +11,7 @@ _ts_precmd() {
   if [[ -n "$__ts_start" ]]; then
     local dur=$(( EPOCHREALTIME - __ts_start ))
     local finished
-    strftime -s finished "%H:%M:%S %Z" $EPOCHSECONDS
+    strftime -s finished "%Y-%m-%d %H:%M:%S %Z" $EPOCHSECONDS
 
     local dur_fmt
     printf -v dur_fmt "%.3f" "$dur"
