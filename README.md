@@ -36,6 +36,39 @@ spaces, tabs, or newlines round-trip cleanly.
 
 The log grows indefinitely — trim or rotate it yourself if that matters to you.
 
+## Screenshots
+
+How the `cmd-timestamps` line renders across terminals. Colors and glyph
+alignment depend on the terminal's font and palette, so each one gets its own
+shot. Drop images into `docs/screenshots/` using the filenames below.
+
+### cmux
+
+![cmd-timestamps in cmux](docs/screenshots/cmux.png)
+
+### Terminal.app (native macOS)
+
+![cmd-timestamps in Terminal.app](docs/screenshots/terminal-app.png)
+
+### Kero
+
+![cmd-timestamps in Kero](docs/screenshots/kero.png)
+
+### Ghostty
+
+![cmd-timestamps in Ghostty](docs/screenshots/ghostty.png)
+
+### Warp
+
+![cmd-timestamps in Warp](docs/screenshots/warp.png)
+
+### iTerm2
+
+![cmd-timestamps in iTerm2](docs/screenshots/iterm2.png)
+
+> Using a terminal that isn't listed? Screenshots welcome — add the image to
+> `docs/screenshots/` and a matching section here.
+
 ## Installation
 
 Clone the repo somewhere, then source the plugins you want from `~/.zshrc`:
