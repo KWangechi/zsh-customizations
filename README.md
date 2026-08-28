@@ -84,7 +84,7 @@ source ~/.zsh-customizations/plugins/cmd-history-log/cmd-history-log.plugin.zsh
 Then reload:
 
 ```sh
-source ~/.zshrc
+exec zsh
 ```
 
 ### With oh-my-zsh
