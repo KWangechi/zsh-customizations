@@ -46,7 +46,7 @@ _ts_precmd() {
     (( exit_code > 0 && exit_code <=128 )) && color=1 #red - failed
 
     # Print timestamp
-    print -P "%F{8}◆ Completed at: [$finished] — ${__ts_cmd} — took ${dur_fmt}s — %F{$color}${status_label}%F{8}%f"
+    print -rP "%F{8}◆ Completed at: [$finished] — %f%B%F{27}${__ts_cmd}%f%b%F{8} — took ${dur_fmt}s — %F{$color}${status_label}%F{8}%f"
   fi
   unset __ts_start __ts_cmd
 }
