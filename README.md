@@ -15,10 +15,40 @@ themes/               (empty for now)
 
 ### `cmd-timestamps`
 
-After each command returns, prints a dim one-line summary: when it finished, what it was, how long it took, and its exit code.
+After each command returns, prints a dim one-line summary: when it finished, what it was, how long it took, and how it ended.
 
 ```
-◆ Completed at: [2026-08-25 21:04:37 EAT] — npm test — took 4.812s — exit 0
+◆ Completed at: [2026-08-25 21:04:37 EAT] — npm test — took 4.812s — done
+```
+
+#### Long commands are shortened
+
+The line is a reminder, not a transcript — the full command is one `history`
+away. Long commands are cut down by three standard rules, applied in order:
+
+1. **Stop at the first `|`, `&&`, `||`, `;` or newline.** The first stage of a
+   pipeline is what you meant to run.
+2. **Keep the first few shell words.** Quoted arguments count as one word, so a
+   commit message is never split across several.
+3. **Shorten any single word that is still too long**, keeping its closing
+   quote so a clipped string still reads as one.
+
+A trailing `…` means something was dropped.
+
+```
+git commit -m "fix: rework the auth refactor"  →  git commit -m "fix: rework the auth r…"
+docker build -t app:1.2 --build-arg X=1 -f Dockerfile .
+                                               →  docker build -t app:1.2 --build-arg X=1 …
+npm test | tee out.log                         →  npm test …
+```
+
+Tune it by setting these before sourcing the plugin (defaults shown):
+
+```sh
+TS_CMD_MAX_WORDS=6      # shell words kept
+TS_CMD_MAX_WORD_LEN=24  # longest single word
+TS_CMD_MAX_LEN=72       # hard cap on the whole command
+TS_ELLIPSIS=…           # marker for "there was more"
 ```
 
 ### `cmd-history-log`
