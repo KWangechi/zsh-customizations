@@ -36,17 +36,17 @@ away. Long commands are cut down by three standard rules, applied in order:
 A trailing `…` means something was dropped.
 
 ```
-git commit -m "fix: rework the auth refactor"  →  git commit -m "fix: rework the auth r…"
+git commit -m "fix: rework the auth refactor"  →  git commit -m "fix: rework the au…"
 docker build -t app:1.2 --build-arg X=1 -f Dockerfile .
-                                               →  docker build -t app:1.2 --build-arg X=1 …
+                                               →  docker build -t app:1.2 --build-arg …
 npm test | tee out.log                         →  npm test …
 ```
 
 Tune it by setting these before sourcing the plugin (defaults shown):
 
 ```sh
-TS_CMD_MAX_WORDS=6      # shell words kept
-TS_CMD_MAX_WORD_LEN=24  # longest single word
+TS_CMD_MAX_WORDS=5      # shell words kept
+TS_CMD_MAX_WORD_LEN=20  # longest single word
 TS_CMD_MAX_LEN=72       # hard cap on the whole command
 TS_ELLIPSIS=…           # marker for "there was more"
 ```

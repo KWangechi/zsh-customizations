@@ -29,9 +29,9 @@ _ts_status_label() {
 # the command itself — the full text is one `history` away.
 #
 #   git commit -m "a very long message about the thing"
-#       -> git commit -m "a very long message ab…"
+#       -> git commit -m "a very long messag…"
 #   docker build -t app:latest --build-arg NODE_ENV=production -f ./docker/Dockerfile .
-#       -> docker build -t app:latest --build-arg .…
+#       -> docker build -t app:latest --build-arg …
 #   npm test | tee out.log
 #       -> npm test …
 _ts_truncate_command() {
@@ -111,7 +111,7 @@ _ts_precmd() {
 
     # Color Format
     local color=2
-    ((exit_code > 128)) && color=3 # yellow - interrupted
+    (( exit_code > 128 )) && color=3 # yellow - interrupted
     (( exit_code > 0 && exit_code <=128 )) && color=1 #red - failed
 
     # Print timestamp
